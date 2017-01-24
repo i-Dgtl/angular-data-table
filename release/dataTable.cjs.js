@@ -214,7 +214,7 @@ function FooterDirective() {
       paging: '=',
       onPage: '&'
     },
-    template: "<div class=\"dt-footer\">\n        <div class=\"page-count\">{{footer.paging.count}} {footer.paging.totalLabel || 'Total' }}</div>\n        <dt-pager page=\"footer.page\"\n               size=\"footer.paging.size\"\n               count=\"footer.paging.count\"\n               on-page=\"footer.onPaged(page)\"\n               ng-show=\"footer.paging.count / footer.paging.size > 1\">\n         </dt-pager>\n      </div>",
+    template: "<div class=\"dt-footer\">\n        <div class=\"page-count\">{{footer.paging.count}} {{footer.paging.totalLabel || 'Total' }}</div>\n        <dt-pager page=\"footer.page\"\n               size=\"footer.paging.size\"\n               count=\"footer.paging.count\"\n               on-page=\"footer.onPaged(page)\"\n               ng-show=\"footer.paging.count / footer.paging.size > 1\">\n         </dt-pager>\n      </div>",
     replace: true
   };
 }

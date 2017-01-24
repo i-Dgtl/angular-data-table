@@ -250,7 +250,7 @@ function FooterDirective(){
     },
     template:
       `<div class="dt-footer">
-        <div class="page-count">{{footer.paging.count}} {footer.paging.totalLabel || 'Total' }}</div>
+        <div class="page-count">{{footer.paging.count}} {{footer.paging.totalLabel || 'Total' }}</div>
         <dt-pager page="footer.page"
                size="footer.paging.size"
                count="footer.paging.count"
