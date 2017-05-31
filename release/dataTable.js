@@ -2201,7 +2201,12 @@
     }, {
       key: "calculatePageSize",
       value: function calculatePageSize() {
-        this.options.paging.size = Math.ceil(this.options.internal.bodyHeight / this.options.rowHeight) + 1;
+        var SCROLLBAR_HEIGHT = 10;
+        if (this.options.scrollbarV) {
+          this.options.paging.size = Math.ceil(this.options.internal.bodyHeight / this.options.rowHeight) + 1;
+        } else {
+          this.options.paging.size = Math.floor((this.options.internal.bodyHeight - SCROLLBAR_HEIGHT) / this.options.rowHeight);
+        }
       }
     }, {
       key: "onSorted",
